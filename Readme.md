@@ -1,3 +1,20 @@
+The issue is that you’ve included the entire README inside a code block (` ```markdown `), which causes GitHub to render it as plain text instead of Markdown. That’s why your headings, bold text, and links aren't formatting properly.
+
+---
+
+### ✅ Fix it by **removing the code block markers** (the lines with triple backticks):
+
+In your current README, this:
+
+<pre>
+```markdown
+# **Netflix Review Sentiment Analyzer**
+...
+``` 
+</pre>
+
+Should become:
+
 ````markdown
 # **Netflix Review Sentiment Analyzer**
 
@@ -60,10 +77,10 @@ streamlit run app.py
 ## Requirements
 
 ```
-streamlit==1.35.0
-pandas==2.2.2
-textblob==0.17.1
-matplotlib==3.8.4
+streamlit==1.35.0  
+pandas==2.2.2  
+textblob==0.17.1  
+matplotlib==3.8.4  
 nltk==3.8.1
 ```
 
@@ -80,4 +97,11 @@ To deploy on Streamlit Cloud:
 
 This project is licensed under the MIT License.
 
+```
+
+---
+
+Once you do this and save the README, GitHub will properly render headings, bold text, links, and code blocks.
+
+Let me know if you’d like me to update your README.md file for you.
 ```
