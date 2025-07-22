@@ -4,6 +4,10 @@ from textblob import TextBlob
 import matplotlib.pyplot as plt
 import random
 import itertools
+import nltk
+
+nltk.download('punkt')  # Required for TextBlob to work
+
 
 # Set page title and layout
 st.set_page_config(page_title="Netflix Review Sentiment", layout="wide")
