@@ -1,0 +1,125 @@
+# Netflix Review Sentiment Analyzer
+
+A Streamlit web application for performing sentiment analysis on IMDb-style reviews of Netflix shows and movies using TextBlob. Users can upload a custom dataset, write their own reviews, explore sentiment distributions, and compare shows side-by-side. The app also assigns random Netflix show titles and release years to create a realistic visual experience when those fields are missing.
+
+---
+
+## Live Demo
+
+Try the app here:
+**[Open Netflix Review Sentiment Analyzer](https://your-deployed-app-url.streamlit.app)**
+_(Replace this link with your actual deployed URL)_
+
+---
+
+## Features
+
+- Upload a CSV dataset of reviews with sentiments
+- Analyze your own review in real-time
+- Assigns fake Netflix show titles and release years if missing
+- Visualizes:
+
+  - Overall sentiment distribution (bar chart)
+  - Sentiment breakdown for a selected show (pie chart)
+  - Sentiment comparison between two shows (side-by-side bar chart)
+
+---
+
+## Dataset Requirements
+
+Your uploaded CSV should have the following columns:
+
+Required:
+
+- `review`: The text content of the review
+- `sentiment`: Either `positive` or `negative`
+
+Optional:
+
+- `title`: Show or movie title
+- `year`: Release year
+
+If `title` and `year` are not provided, the app randomly assigns values from a predefined list of Netflix show names and years (2015–2023).
+
+### Example:
+
+```csv
+review,sentiment,title,year
+"Amazing storytelling and acting.",positive,Dark,2018
+"Too slow and unengaging.",negative,,
+```
+
+---
+
+## How It Works
+
+- Sentiment is calculated using **TextBlob**
+- Custom reviews return `Positive`, `Negative`, or `Neutral` based on polarity
+- Dataset reviews are filtered to only include `Positive` or `Negative` entries
+- Missing metadata is filled with fake but realistic values for visual impact
+- Matplotlib is used for rendering bar and pie charts
+
+---
+
+## Installation
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/your-username/netflix-review-sentiment.git
+cd netflix-review-sentiment
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the app locally:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## Deployment (Streamlit Cloud)
+
+To deploy this app for free:
+
+1. Push your code to a GitHub repository
+2. Visit [https://streamlit.io/cloud](https://streamlit.io/cloud)
+3. Sign in with GitHub and click **"New app"**
+4. Choose your repo, set the main file as `app.py`, and click **Deploy**
+
+Your app will be live and shareable via a unique public URL.
+
+---
+
+## Requirements
+
+`requirements.txt` should contain:
+
+```
+streamlit
+pandas
+textblob
+matplotlib
+```
+
+You can create this file by running:
+
+```bash
+pip freeze > requirements.txt
+```
+
+(Then manually remove unrelated packages if needed)
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
