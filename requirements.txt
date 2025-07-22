@@ -1,11 +1,5 @@
-# Core libraries
 streamlit==1.35.0
 pandas==2.2.2
 textblob==0.17.1
 matplotlib==3.8.4
-
-# For TextBlob to work properly
 nltk==3.8.1
-
-# Optional: To help with emoji/logging or future features
-python-dotenv>=1.0.1
