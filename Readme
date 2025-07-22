@@ -1,130 +1,60 @@
-Here is a **professional, clean, and symbol-free** version of your `README.md`, written in a formal tone and structured for recruiters, collaborators, or potential users:
+Netflix Review Sentiment Analyzer
 
----
+A Streamlit web app for analyzing IMDb-style reviews of Netflix shows and movies using TextBlob. Users can upload review datasets, write custom reviews, and explore sentiment trends through interactive visualizations.
 
-# Netflix Review Sentiment Analyzer
+Live Demo
 
-This project is a web-based sentiment analysis tool developed using Streamlit. It analyzes IMDb-style reviews for Netflix shows and movies using the TextBlob library. Users can upload their own datasets, write and analyze custom reviews, explore sentiment distributions, and compare reviews across different titles. The application also assigns show titles and release years when they are not provided in the data, for a more complete experience.
+Launch App
+Replace with your deployed Streamlit Cloud URL.
 
----
+Features
 
-## Live Demo
+Upload CSV files with reviews and sentiments
+Analyze custom reviews in real time
+Auto-assigns show titles and years if missing
+Visualizes:
+Overall sentiment (bar chart)
+Show-wise sentiment (pie chart)
+Comparison between two shows (bar chart)
+Dataset Format
 
-Access the deployed application at the following link:
-**[Netflix Review Sentiment Analyzer](https://your-deployed-app-url.streamlit.app)**
-*Note: Replace this URL with your actual deployment link.*
+Required columns:
 
----
+review
+sentiment (values: positive or negative)
+Optional columns:
 
-## Features
+title
+year
+Missing values are filled with random Netflix titles and years.
 
-* Upload and process CSV files containing reviews and sentiment labels
-* Analyze individual reviews through real-time sentiment detection
-* Automatically assign show titles and release years if missing
-* Visualize data using:
+How It Works
 
-  * Overall sentiment distribution (bar chart)
-  * Sentiment breakdown by show (pie chart)
-  * Sentiment comparison between two shows (side-by-side bar chart)
+Sentiment detected using TextBlob polarity
+Matplotlib used for charts
+Neutral sentiment supported only for custom reviews
+Dataset filtered to include only positive and negative
+Installation
 
----
-
-## Dataset Format
-
-The uploaded CSV file must include the following columns:
-
-**Required Columns**
-
-* `review`: The text of the review
-* `sentiment`: The sentiment label (`positive` or `negative`)
-
-**Optional Columns**
-
-* `title`: The name of the show or movie
-* `year`: The release year
-
-If `title` and `year` are not provided, the application will randomly assign them from predefined lists.
-
-**Example CSV**
-
-```csv
-review,sentiment,title,year
-"Amazing storytelling and acting.",positive,Dark,2018
-"Too slow and unengaging.",negative,,
-```
-
----
-
-## How It Works
-
-* The application uses the TextBlob library to calculate polarity and determine sentiment
-* Reviews written by the user are labeled as Positive, Negative, or Neutral
-* Dataset reviews are filtered to include only Positive or Negative sentiments
-* Visualizations are created using Matplotlib
-
----
-
-## Installation
-
-1. Clone the repository
-
-```bash
 git clone https://github.com/your-username/netflix-review-sentiment.git
 cd netflix-review-sentiment
-```
-
-2. Install the required Python packages
-
-```bash
 pip install -r requirements.txt
-```
-
-3. Run the Streamlit application
-
-```bash
 streamlit run app.py
-```
+Download required corpora:
 
----
+python -m textblob.download_corpora
+Deployment
 
-## Deployment on Streamlit Cloud
+Push code to GitHub
+Go to streamlit.io/cloud
+Deploy with app.py as the main file
+Requirements
 
-To deploy the application online:
-
-1. Push the project to a public GitHub repository
-2. Visit [streamlit.io/cloud](https://streamlit.io/cloud)
-3. Sign in with your GitHub account
-4. Click "New app" and select your repository
-5. Set the main file to `app.py` and click "Deploy"
-
-The application will be live at a public URL for sharing.
-
----
-
-## Requirements
-
-The `requirements.txt` file should include the following libraries:
-
-```
 streamlit==1.35.0
 pandas==2.2.2
 textblob==0.17.1
 matplotlib==3.8.4
 nltk==3.8.1
-```
+License
 
-After installation, download TextBlob's necessary corpora by running:
-
-```bash
-python -m textblob.download_corpora
-```
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-Let me know if you'd like this adapted for GitHub Pages or formatted into a PDF for portfolio purposes.
+Licensed under the MIT License.
