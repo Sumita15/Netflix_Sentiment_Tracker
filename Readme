@@ -1,5 +1,3 @@
-Here’s your **final polished, professional, and ready-to-use README** with big headings, clean formatting, no symbols before headings, and all essential sections:
-
 ````markdown
 # **Netflix Review Sentiment Analyzer**
 
@@ -82,7 +80,4 @@ To deploy on Streamlit Cloud:
 
 This project is licensed under the MIT License.
 
-```
-
-You can now **copy-paste this entire README into your GitHub repository** — it’s clean, modern, and fully structured. Let me know if you'd like to auto-generate a logo or app thumbnail too!
 ```
