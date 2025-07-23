@@ -14,8 +14,8 @@ Built with **Streamlit**, **TextBlob**, **Pandas**, and **Matplotlib**.
 
 ## Live Demo
 
-🔗 [Click here to try the app](https://your-deployed-app-url.streamlit.app)  
-*(Replace with your actual deployed app link)*
+🔗 [Click here to try the app](https://netflixsentimenttracker-mjotvfqtvqm2nnbe5yvebx.streamlit.app)
+Live Netflix Sentiment Tracker app on Streamlit
 
 ## Features
 
