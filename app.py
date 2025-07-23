@@ -31,9 +31,9 @@ else:
     st.info("No file uploaded. Using default IMDb dataset.")
     import zipfile
 
-with zipfile.ZipFile("IMDB Dataset.csv.zip", 'r') as zip_ref:
-    with zip_ref.open("IMDB Dataset.csv") as file:
-        df = pd.read_csv(file)
+    with zipfile.ZipFile("IMDB Dataset.csv.zip", 'r') as zip_ref:
+        with zip_ref.open("IMDB Dataset.csv") as file:
+           df = pd.read_csv(file)
 
 # Capitalize sentiments & filter only Positive/Negative
 df["sentiment"] = df["sentiment"].str.capitalize()
